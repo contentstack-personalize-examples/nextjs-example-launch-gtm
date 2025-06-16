@@ -2,19 +2,14 @@
 
 import React, { useState } from 'react';
 
-import { usePersonalize } from '@/components/context/PersonalizeContext';
-
 export const PageContent = () => {
-  const value = localStorage.getItem('isSubscribed');
+  const value = window.localStorage.getItem('isSubscribed');
+  console.log("🚀 ~ PageContent ~ value:", value)
   const [isSubscribed, setIsSubscribed] = useState(value === 'true');
-  const personalizeSdk = usePersonalize();
 
   const subscribe = async (shouldSubscribe: boolean) => {
     setIsSubscribed(shouldSubscribe);
-    localStorage.setItem('isSubscribed', `${shouldSubscribe}`);
-    await personalizeSdk?.set({
-      isRewardMember: shouldSubscribe,
-    });
+    window.localStorage.setItem('isSubscribed', `${shouldSubscribe}`);
   };
 
   return (
