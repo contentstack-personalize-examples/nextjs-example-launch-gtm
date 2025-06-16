@@ -21,8 +21,6 @@ If you're not working with the AWS NA production environment, you can set the fo
 `CONTENTSTACK_DELIVERY_API_HOST`: Just the host of the target CMS delivery environment. For example, `eu-cdn.contentstack.com`
 `CONTENTSTACK_PERSONALIZE_EDGE_API_URL`: The URL of the target personalize delivery environment. For example, `https://eu-personalize-edge.contentstack.com`.
 
-The `NEXT_PUBLIC_CONTENTSTACK_HOMEPAGE_EXPERIENCES` environment variable is used to populate a list of Experience Short UIDs running on the home page for e.g. `a,b`. Impressions for these experiences are sent when visiting the home page.
-
 For setting up NextAuth:
 
 `NEXTAUTH_URL`={deployed domain} (should be http://localhost:3000 in case you're developing locally)
@@ -38,6 +36,17 @@ After creating, you'll need to generate a new client secret. Once done, populate
 
 `GITHUB_ID`={Client ID}
 `GITHUB_SECRET`={Client Secret}
+
+## Setting up Google Tag Manager
+
+1. Create an account at `https://tagmanager.google.com` if you don't have one already and set up a container. Follow [our official documentation](https://www.contentstack.com/docs/personalize/google-tag-manager-integration-with-personalize#create-an-gtm-account-container-and-install-a-web-container) for more details.
+2. We have an exported container in `gtm-container.json` which includes all the tags, triggers and variables needed for triggering impression, conversions and setting user attributes for this example project.
+3. To import the fully setup container
+    1. Open your newly created blank container on GTM.
+    2. Go to admin and click on 'Import Container'.
+    3. Choose the `gtm-container.json` container file and choose the appropriate option for workspace and overwrite options and import the container.
+    4. You should see the Tags, Variables and Triggers get populated in your workspace.
+4. Set the appropriate values for Project UID in the 'Init Personalize SDK' tag and Experience Short UIDS in the 'Trigger Home Page Impressions' tag.
 
 Then, run the development server:
 
