@@ -1,0 +1,465 @@
+{
+    "exportFormatVersion": 2,
+    "exportTime": "2025-06-16 08:00:06",
+    "containerVersion": {
+        "path": "",
+        "accountId": "",
+        "containerId": "",
+        "containerVersionId": "0",
+        "container": {
+            "path": "",
+            "accountId": "",
+            "containerId": "",
+            "name": "Personalize NextJS Example",
+            "publicId": "",
+            "usageContext": [
+                "WEB"
+            ],
+            "fingerprint": "",
+            "tagManagerUrl": "",
+            "features": {
+                "supportUserPermissions": true,
+                "supportEnvironments": true,
+                "supportWorkspaces": true,
+                "supportGtagConfigs": false,
+                "supportBuiltInVariables": true,
+                "supportClients": false,
+                "supportFolders": true,
+                "supportTags": true,
+                "supportTemplates": true,
+                "supportTriggers": true,
+                "supportVariables": true,
+                "supportVersions": true,
+                "supportZones": true,
+                "supportTransformations": false
+            },
+            "tagIds": [
+                ""
+            ]
+        },
+        "tag": [
+            {
+                "accountId": "",
+                "containerId": "",
+                "tagId": "5",
+                "name": "Trigger Home Page Impressions",
+                "type": "cvt_WKGBT",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "actionType",
+                        "value": "triggerImpressions"
+                    },
+                    {
+                        "type": "LIST",
+                        "key": "experiences",
+                        "list": [
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "shortUID",
+                                        "value": "b"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "shortUID",
+                                        "value": "c"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "shortUID",
+                                        "value": "d"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "",
+                "firingTriggerId": [
+                    "4"
+                ],
+                "setupTag": [
+                    {
+                        "tagName": "Init Personalize SDK"
+                    }
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            },
+            {
+                "accountId": "",
+                "containerId": "",
+                "tagId": "6",
+                "name": "Init Personalize SDK",
+                "type": "cvt_WKGBT",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "actionType",
+                        "value": "initialize"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "personalizeSdkUrl",
+                        "value": "https://cdn.jsdelivr.net/npm/@contentstack/personalize-edge-sdk/dist/personalize-edge-sdk.min.js"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "projectUid",
+                        "value": "<use yor>"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "edgeApiUrl",
+                        "value": "https://personalize-edge.contentstack.com"
+                    }
+                ],
+                "fingerprint": "1750060484284",
+                "firingTriggerId": [
+                    "2147479553"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            },
+            {
+                "accountId": "",
+                "containerId": "",
+                "tagId": "8",
+                "name": "Trigger Read More Click Event",
+                "type": "cvt_WKGBT",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "actionType",
+                        "value": "triggerEvent"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "eventKey",
+                        "value": "readMoreButtonClick"
+                    }
+                ],
+                "fingerprint": "",
+                "firingTriggerId": [
+                    "7"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            },
+            {
+                "accountId": "",
+                "containerId": "",
+                "tagId": "10",
+                "name": "Set Is Rewards Member True",
+                "type": "cvt_WKGBT",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "actionType",
+                        "value": "setAttributes"
+                    },
+                    {
+                        "type": "LIST",
+                        "key": "userAttributes",
+                        "list": [
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "attributeKey",
+                                        "value": "isRewardMember"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "attributeValue",
+                                        "value": "{{JavaScript Boolean True}}"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "",
+                "firingTriggerId": [
+                    "9"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            },
+            {
+                "accountId": "",
+                "containerId": "",
+                "tagId": "13",
+                "name": "Set Is Rewards Member False",
+                "type": "cvt_WKGBT",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "actionType",
+                        "value": "setAttributes"
+                    },
+                    {
+                        "type": "LIST",
+                        "key": "userAttributes",
+                        "list": [
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "attributeKey",
+                                        "value": "isRewardMember"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "attributeValue",
+                                        "value": "{{JavaScript Boolean False}}"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "",
+                "firingTriggerId": [
+                    "12"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            }
+        ],
+        "trigger": [
+            {
+                "accountId": "",
+                "containerId": "",
+                "triggerId": "4",
+                "name": "Home Page View",
+                "type": "PAGEVIEW",
+                "filter": [
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{Page Path}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "/"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1742227457383"
+            },
+            {
+                "accountId": "",
+                "containerId": "",
+                "triggerId": "7",
+                "name": "Read More Button Click",
+                "type": "CLICK",
+                "filter": [
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{Click ID}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "read-more"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": ""
+            },
+            {
+                "accountId": "",
+                "containerId": "",
+                "triggerId": "9",
+                "name": "Subscribe To Rewards Program Click",
+                "type": "CLICK",
+                "filter": [
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{Click ID}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "subscribe"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": ""
+            },
+            {
+                "accountId": "",
+                "containerId": "",
+                "triggerId": "12",
+                "name": "Unsubscribe From Rewards Program Click",
+                "type": "CLICK",
+                "filter": [
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{Click ID}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "unsubscribe"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1750059820987"
+            }
+        ],
+        "variable": [
+            {
+                "accountId": "",
+                "containerId": "",
+                "variableId": "11",
+                "name": "JavaScript Boolean False",
+                "type": "jsm",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "javascript",
+                        "value": "function() { return false; }"
+                    }
+                ],
+                "fingerprint": "",
+                "formatValue": {}
+            },
+            {
+                "accountId": "",
+                "containerId": "",
+                "variableId": "14",
+                "name": "JavaScript Boolean True",
+                "type": "jsm",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "javascript",
+                        "value": "function() { return true; }"
+                    }
+                ],
+                "fingerprint": "",
+                "formatValue": {}
+            }
+        ],
+        "builtInVariable": [
+            {
+                "accountId": "",
+                "containerId": "",
+                "type": "PAGE_URL",
+                "name": "Page URL"
+            },
+            {
+                "accountId": "",
+                "containerId": "",
+                "type": "PAGE_HOSTNAME",
+                "name": "Page Hostname"
+            },
+            {
+                "accountId": "",
+                "containerId": "",
+                "type": "PAGE_PATH",
+                "name": "Page Path"
+            },
+            {
+                "accountId": "",
+                "containerId": "",
+                "type": "REFERRER",
+                "name": "Referrer"
+            },
+            {
+                "accountId": "",
+                "containerId": "",
+                "type": "EVENT",
+                "name": "Event"
+            },
+            {
+                "accountId": "",
+                "containerId": "",
+                "type": "CLICK_ID",
+                "name": "Click ID"
+            }
+        ],
+        "fingerprint": "",
+        "tagManagerUrl": "",
+        "customTemplate": [
+            {
+                "accountId": "",
+                "containerId": "",
+                "templateId": "3",
+                "name": "Contentstack Personalize Actions",
+                "fingerprint": "",
+                "templateData": "___TERMS_OF_SERVICE___\n\nBy creating or modifying this file you agree to Google Tag Manager's Community\nTemplate Gallery Developer Terms of Service available at\nhttps://developers.google.com/tag-manager/gallery-tos (or such other URL as\nGoogle may provide), as modified from time to time.\n\n\n___INFO___\n\n{\n  \"type\": \"TAG\",\n  \"id\": \"cvt_WKGBT\",\n  \"version\": 1,\n  \"securityGroups\": [],\n  \"displayName\": \"Contentstack Personalize Actions\",\n  \"categories\": [\n    \"MARKETING\",\n    \"ANALYTICS\",\n    \"PERSONALIZATION\"\n  ],\n  \"brand\": {\n    \"id\": \"github.com_contentstack\",\n    \"displayName\": \"contentstack\",\n    \"thumbnail\": \"data:image/png;base64,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\"\n  },\n  \"description\": \"Integrate the Personalize Edge SDK into your frontend seamlessly through Google Tag Manager\",\n  \"containerContexts\": [\n    \"WEB\"\n  ]\n}\n\n\n___TEMPLATE_PARAMETERS___\n\n[\n  {\n    \"type\": \"SELECT\",\n    \"name\": \"actionType\",\n    \"displayName\": \"Action Type\",\n    \"selectItems\": [\n      {\n        \"value\": \"triggerImpressions\",\n        \"displayValue\": \"Trigger Impressions\"\n      },\n      {\n        \"value\": \"triggerEvent\",\n        \"displayValue\": \"Trigger Event\"\n      },\n      {\n        \"value\": \"setAttributes\",\n        \"displayValue\": \"Set Attributes\"\n      },\n      {\n        \"value\": \"initialize\",\n        \"displayValue\": \"Initialize\"\n      },\n      {\n        \"value\": \"setUserId\",\n        \"displayValue\": \"Set UserId\"\n      },\n      {\n        \"value\": \"reset\",\n        \"displayValue\": \"Reset\"\n      }\n    ],\n    \"simpleValueType\": true,\n    \"valueValidators\": [\n      {\n        \"type\": \"NON_EMPTY\"\n      }\n    ]\n  },\n  {\n    \"type\": \"TEXT\",\n    \"name\": \"eventKey\",\n    \"displayName\": \"Event Key\",\n    \"simpleValueType\": true,\n    \"enablingConditions\": [\n      {\n        \"paramName\": \"actionType\",\n        \"paramValue\": \"triggerEvent\",\n        \"type\": \"EQUALS\"\n      }\n    ],\n    \"valueValidators\": [\n      {\n        \"type\": \"NON_EMPTY\"\n      }\n    ],\n    \"help\": \"Custom event key defined in the Personalize management console\"\n  },\n  {\n    \"type\": \"PARAM_TABLE\",\n    \"name\": \"experiences\",\n    \"displayName\": \"Experiences\",\n    \"paramTableColumns\": [\n      {\n        \"param\": {\n          \"type\": \"TEXT\",\n          \"name\": \"shortUID\",\n          \"displayName\": \"ShortUID\",\n          \"simpleValueType\": true\n        },\n        \"isUnique\": true\n      }\n    ],\n    \"enablingConditions\": [\n      {\n        \"paramName\": \"actionType\",\n        \"paramValue\": \"triggerImpressions\",\n        \"type\": \"EQUALS\"\n      }\n    ],\n    \"valueValidators\": [\n      {\n        \"type\": \"NON_EMPTY\"\n      }\n    ],\n    \"help\": \"Short UIDs of the experiences for which you want to register an impression\"\n  },\n  {\n    \"type\": \"PARAM_TABLE\",\n    \"name\": \"userAttributes\",\n    \"displayName\": \"Attributes\",\n    \"paramTableColumns\": [\n      {\n        \"param\": {\n          \"type\": \"TEXT\",\n          \"name\": \"attributeKey\",\n          \"displayName\": \"Key\",\n          \"simpleValueType\": true\n        },\n        \"isUnique\": true\n      },\n      {\n        \"param\": {\n          \"type\": \"TEXT\",\n          \"name\": \"attributeValue\",\n          \"displayName\": \"Value\",\n          \"simpleValueType\": true\n        },\n        \"isUnique\": false\n      }\n    ],\n    \"enablingConditions\": [\n      {\n        \"paramName\": \"actionType\",\n        \"paramValue\": \"setAttributes\",\n        \"type\": \"EQUALS\"\n      }\n    ],\n    \"help\": \"These attributes are used to evaluate audience membership\"\n  },\n  {\n    \"type\": \"TEXT\",\n    \"name\": \"projectUid\",\n    \"displayName\": \"Project UID\",\n    \"simpleValueType\": true,\n    \"enablingConditions\": [\n      {\n        \"paramName\": \"actionType\",\n        \"paramValue\": \"initialize\",\n        \"type\": \"EQUALS\"\n      }\n    ],\n    \"valueValidators\": [\n      {\n        \"type\": \"NON_EMPTY\",\n        \"enablingConditions\": []\n      }\n    ],\n    \"help\": \"The UID of your project\"\n  },\n  {\n    \"type\": \"TEXT\",\n    \"name\": \"personalizeSdkUrl\",\n    \"displayName\": \"Personalize SDK URL\",\n    \"simpleValueType\": true,\n    \"enablingConditions\": [\n      {\n        \"paramName\": \"actionType\",\n        \"paramValue\": \"initialize\",\n        \"type\": \"EQUALS\"\n      }\n    ],\n    \"valueValidators\": [\n      {\n        \"type\": \"NON_EMPTY\"\n      }\n    ],\n    \"defaultValue\": \"https://cdn.jsdelivr.net/npm/@contentstack/personalize-edge-sdk/dist/personalize-edge-sdk.min.js\"\n  },\n  {\n    \"type\": \"TEXT\",\n    \"name\": \"edgeApiUrl\",\n    \"displayName\": \"Edge API URL\",\n    \"simpleValueType\": true,\n    \"enablingConditions\": [\n      {\n        \"paramName\": \"actionType\",\n        \"paramValue\": \"initialize\",\n        \"type\": \"EQUALS\"\n      }\n    ],\n    \"help\": \"Choose between different regions by setting the Edge API URL. You don\\u0027t need to change this field if your project is created in AWS NA region. See https://www.contentstack.com/docs/developers/apis/personalize-edge-api#base-url for more information.\",\n    \"valueValidators\": [\n      {\n        \"type\": \"NON_EMPTY\"\n      }\n    ],\n    \"defaultValue\": \"https://personalize-edge.contentstack.com\"\n  },\n  {\n    \"type\": \"CHECKBOX\",\n    \"name\": \"preserveUserAttributes\",\n    \"checkboxText\": \"Preserve User Attributes\",\n    \"simpleValueType\": true,\n    \"enablingConditions\": [\n      {\n        \"paramName\": \"actionType\",\n        \"paramValue\": \"setUserId\",\n        \"type\": \"EQUALS\"\n      }\n    ],\n    \"help\": \"Set this to true if you want the attributes to be preserved/merged when the user logs in\"\n  }\n]\n\n\n___SANDBOXED_JS_FOR_WEB_TEMPLATE___\n\nconst log = require('logToConsole');\nconst callInWindow = require('callInWindow');\nconst injectScript = require('injectScript');\nconst copyFromDataLayer = require('copyFromDataLayer');\n\nconst actionType = data.actionType;\n\nconst INITIALIZE = 'initialize';\nconst TRIGGER_IMPRESSIONS = 'triggerImpressions';\nconst TRIGGER_EVENT = 'triggerEvent';\nconst SET_ATTRIBUTES = 'setAttributes';\nconst SET_USER_ID = 'setUserId';\nconst RESET = 'reset';\n\nfunction main() {\n  if (actionType != INITIALIZE && !initializationCalled()) {\n    failGTM('Cannot perform actions before initialization');\n    return;\n  }\n  performAction();\n}\n\nfunction initializationCalled() {\n  const initStatus = callInWindow('personalize.getInitializationStatus');\n\n  return initStatus === undefined ? false : true;\n}\n\nfunction performAction() {\n  switch (actionType) {\n    case INITIALIZE: {\n      const personalizeSdkUrl = data.personalizeSdkUrl;\n\n      injectScript(personalizeSdkUrl, onSdkLoad, onSdkFailure, personalizeSdkUrl);\n      break;\n    }\n    case TRIGGER_IMPRESSIONS: {\n      const experiences = data.experiences;\n      if (!experiences) {\n        failGTM('Experience ShortUIDs cannot be empty');\n        break;\n      }\n      const experienceShortUIDs = experiences.map((experience) => experience.shortUID);\n\n      performTriggerImpressions(experienceShortUIDs);\n      break;\n    }\n    case TRIGGER_EVENT:\n      const eventKey = data.eventKey;\n      if(!eventKey) {\n        failGTM('Event Key cannot be empty');\n      }\n      performTriggerEvent(eventKey);\n      break;\n    case SET_ATTRIBUTES:\n      const userAttributes = data.userAttributes;\n      if(!userAttributes) {\n        failGTM('User attributes cannot be empty');\n        break;\n      }\n      const userAttributesObject = {};\n      userAttributes.forEach(item => {\n          if(item.attributeValue == \"true\") {\n            item.attributeValue = true;\n          }\n          if(item.attributeValue == \"false\") {\n            item.attributeValue = false;\n          }\n          userAttributesObject[item.attributeKey] = item.attributeValue;\n      });\n      performSetAttributes(userAttributesObject);\n      break;\n    case SET_USER_ID:\n      const userId = copyFromDataLayer('data.email',2);\n      const preserveUserAttributes = data.preserveUserAttributes;\n      performSetUserId(userId, preserveUserAttributes);\n      break;\n    case RESET:\n      performReset();\n      break;\n    default:\n      failGTM('Please select a valid actionType');\n      break;\n  }\n}\n\nfunction onSdkLoad() {\n  callInWindow('personalize.setEdgeApiUrl', data.edgeApiUrl);\n  callInWindow('personalize.init', data.projectUid);\n  successGTM();\n}\n\nfunction onSdkFailure() {\n  failGTM('Failed to load sdk');\n}\n\nfunction performTriggerImpressions(experienceShortUIDs) {\n  experienceShortUIDs.forEach((experienceShortUID) => {\n    callInWindow('personalize.triggerImpression', experienceShortUID);\n  });\n  successGTM();\n}\n\nfunction performTriggerEvent(eventKey) {\n  callInWindow('personalize.triggerEvent', eventKey);\n  successGTM();\n}\n\nfunction performSetAttributes(userAttributes) {\n  callInWindow('personalize.set', userAttributes);\n  successGTM();\n}\n\nfunction performSetUserId(userId, preserveUserAttributes) {\n  if(preserveUserAttributes) {\n    callInWindow('personalize.setUserId', userId, {preserveUserAttributes: true});\n  } else {\n    callInWindow('personalize.setUserId', userId);\n  }\n  \n  successGTM();\n}\n\nfunction performReset() {\n  callInWindow('personalize.reset');\n  successGTM();\n}\n\nfunction failGTM(message) {\n  if (message) {\n    log(message);\n  }\n  data.gtmOnFailure();\n}\n\nfunction successGTM() {\n  data.gtmOnSuccess();\n}\n\nmain();\n\n\n___WEB_PERMISSIONS___\n\n[\n  {\n    \"instance\": {\n      \"key\": {\n        \"publicId\": \"logging\",\n        \"versionId\": \"1\"\n      },\n      \"param\": [\n        {\n          \"key\": \"environments\",\n          \"value\": {\n            \"type\": 1,\n            \"string\": \"debug\"\n          }\n        }\n      ]\n    },\n    \"clientAnnotations\": {\n      \"isEditedByUser\": true\n    },\n    \"isRequired\": true\n  },\n  {\n    \"instance\": {\n      \"key\": {\n        \"publicId\": \"access_globals\",\n        \"versionId\": \"1\"\n      },\n      \"param\": [\n        {\n          \"key\": \"keys\",\n          \"value\": {\n            \"type\": 2,\n            \"listItem\": [\n              {\n                \"type\": 3,\n                \"mapKey\": [\n                  {\n                    \"type\": 1,\n                    \"string\": \"key\"\n                  },\n                  {\n                    \"type\": 1,\n                    \"string\": \"read\"\n                  },\n                  {\n                    \"type\": 1,\n                    \"string\": \"write\"\n                  },\n                  {\n                    \"type\": 1,\n                    \"string\": \"execute\"\n                  }\n                ],\n                \"mapValue\": [\n                  {\n                    \"type\": 1,\n                    \"string\": \"personalize.getInitializationStatus\"\n                  },\n                  {\n                    \"type\": 8,\n                    \"boolean\": false\n                  },\n                  {\n                    \"type\": 8,\n                    \"boolean\": false\n                  },\n                  {\n                    \"type\": 8,\n                    \"boolean\": true\n                  }\n                ]\n              },\n              {\n                \"type\": 3,\n                \"mapKey\": [\n                  {\n                    \"type\": 1,\n                    \"string\": \"key\"\n                  },\n                  {\n                    \"type\": 1,\n                    \"string\": \"read\"\n                  },\n                  {\n                    \"type\": 1,\n                    \"string\": \"write\"\n                  },\n                  {\n                    \"type\": 1,\n                    \"string\": \"execute\"\n                  }\n                ],\n                \"mapValue\": [\n                  {\n                    \"type\": 1,\n                    \"string\": \"personalize.triggerImpression\"\n                  },\n                  {\n                    \"type\": 8,\n                    \"boolean\": false\n                  },\n                  {\n                    \"type\": 8,\n                    \"boolean\": false\n                  },\n                  {\n                    \"type\": 8,\n                    \"boolean\": true\n                  }\n                ]\n              },\n              {\n                \"type\": 3,\n                \"mapKey\": [\n                  {\n                    \"type\": 1,\n                    \"string\": \"key\"\n                  },\n                  {\n                    \"type\": 1,\n                    \"string\": \"read\"\n                  },\n                  {\n                    \"type\": 1,\n                    \"string\": \"write\"\n                  },\n                  {\n                    \"type\": 1,\n                    \"string\": \"execute\"\n                  }\n                ],\n                \"mapValue\": [\n                  {\n                    \"type\": 1,\n                    \"string\": \"personalize.init\"\n                  },\n                  {\n                    \"type\": 8,\n                    \"boolean\": false\n                  },\n                  {\n                    \"type\": 8,\n                    \"boolean\": false\n                  },\n                  {\n                    \"type\": 8,\n                    \"boolean\": true\n                  }\n                ]\n              },\n              {\n                \"type\": 3,\n                \"mapKey\": [\n                  {\n                    \"type\": 1,\n                    \"string\": \"key\"\n                  },\n                  {\n                    \"type\": 1,\n                    \"string\": \"read\"\n                  },\n                  {\n                    \"type\": 1,\n                    \"string\": \"write\"\n                  },\n                  {\n                    \"type\": 1,\n                    \"string\": \"execute\"\n                  }\n                ],\n                \"mapValue\": [\n                  {\n                    \"type\": 1,\n                    \"string\": \"personalize.triggerEvent\"\n                  },\n                  {\n                    \"type\": 8,\n                    \"boolean\": false\n                  },\n                  {\n                    \"type\": 8,\n                    \"boolean\": false\n                  },\n                  {\n                    \"type\": 8,\n                    \"boolean\": true\n                  }\n                ]\n              },\n              {\n                \"type\": 3,\n                \"mapKey\": [\n                  {\n                    \"type\": 1,\n                    \"string\": \"key\"\n                  },\n                  {\n                    \"type\": 1,\n                    \"string\": \"read\"\n                  },\n                  {\n                    \"type\": 1,\n                    \"string\": \"write\"\n                  },\n                  {\n                    \"type\": 1,\n                    \"string\": \"execute\"\n                  }\n                ],\n                \"mapValue\": [\n                  {\n                    \"type\": 1,\n                    \"string\": \"personalize.set\"\n                  },\n                  {\n                    \"type\": 8,\n                    \"boolean\": false\n                  },\n                  {\n                    \"type\": 8,\n                    \"boolean\": false\n                  },\n                  {\n                    \"type\": 8,\n                    \"boolean\": true\n                  }\n                ]\n              },\n              {\n                \"type\": 3,\n                \"mapKey\": [\n                  {\n                    \"type\": 1,\n                    \"string\": \"key\"\n                  },\n                  {\n                    \"type\": 1,\n                    \"string\": \"read\"\n                  },\n                  {\n                    \"type\": 1,\n                    \"string\": \"write\"\n                  },\n                  {\n                    \"type\": 1,\n                    \"string\": \"execute\"\n                  }\n                ],\n                \"mapValue\": [\n                  {\n                    \"type\": 1,\n                    \"string\": \"personalize.setUserId\"\n                  },\n                  {\n                    \"type\": 8,\n                    \"boolean\": false\n                  },\n                  {\n                    \"type\": 8,\n                    \"boolean\": false\n                  },\n                  {\n                    \"type\": 8,\n                    \"boolean\": true\n                  }\n                ]\n              },\n              {\n                \"type\": 3,\n                \"mapKey\": [\n                  {\n                    \"type\": 1,\n                    \"string\": \"key\"\n                  },\n                  {\n                    \"type\": 1,\n                    \"string\": \"read\"\n                  },\n                  {\n                    \"type\": 1,\n                    \"string\": \"write\"\n                  },\n                  {\n                    \"type\": 1,\n                    \"string\": \"execute\"\n                  }\n                ],\n                \"mapValue\": [\n                  {\n                    \"type\": 1,\n                    \"string\": \"personalize.reset\"\n                  },\n                  {\n                    \"type\": 8,\n                    \"boolean\": false\n                  },\n                  {\n                    \"type\": 8,\n                    \"boolean\": false\n                  },\n                  {\n                    \"type\": 8,\n                    \"boolean\": true\n                  }\n                ]\n              },\n              {\n                \"type\": 3,\n                \"mapKey\": [\n                  {\n                    \"type\": 1,\n                    \"string\": \"key\"\n                  },\n                  {\n                    \"type\": 1,\n                    \"string\": \"read\"\n                  },\n                  {\n                    \"type\": 1,\n                    \"string\": \"write\"\n                  },\n                  {\n                    \"type\": 1,\n                    \"string\": \"execute\"\n                  }\n                ],\n                \"mapValue\": [\n                  {\n                    \"type\": 1,\n                    \"string\": \"personalize.setEdgeApiUrl\"\n                  },\n                  {\n                    \"type\": 8,\n                    \"boolean\": false\n                  },\n                  {\n                    \"type\": 8,\n                    \"boolean\": false\n                  },\n                  {\n                    \"type\": 8,\n                    \"boolean\": true\n                  }\n                ]\n              }\n            ]\n          }\n        }\n      ]\n    },\n    \"clientAnnotations\": {\n      \"isEditedByUser\": true\n    },\n    \"isRequired\": true\n  },\n  {\n    \"instance\": {\n      \"key\": {\n        \"publicId\": \"inject_script\",\n        \"versionId\": \"1\"\n      },\n      \"param\": [\n        {\n          \"key\": \"urls\",\n          \"value\": {\n            \"type\": 2,\n            \"listItem\": [\n              {\n                \"type\": 1,\n                \"string\": \"https://cdn.jsdelivr.net/npm/@contentstack/personalize-edge-sdk/*\"\n              }\n            ]\n          }\n        }\n      ]\n    },\n    \"clientAnnotations\": {\n      \"isEditedByUser\": true\n    },\n    \"isRequired\": true\n  },\n  {\n    \"instance\": {\n      \"key\": {\n        \"publicId\": \"read_data_layer\",\n        \"versionId\": \"1\"\n      },\n      \"param\": [\n        {\n          \"key\": \"allowedKeys\",\n          \"value\": {\n            \"type\": 1,\n            \"string\": \"any\"\n          }\n        }\n      ]\n    },\n    \"clientAnnotations\": {\n      \"isEditedByUser\": true\n    },\n    \"isRequired\": true\n  }\n]\n\n\n___TESTS___\n\nscenarios:\n- name: injects sdk when initialize is selected\n  code: |\n    let success, failure;\n\n    mock('injectScript', function (url, onSuccess, onFailure){\n      success = onSuccess;\n      failure = onFailure;\n      onSuccess();\n    });\n\n    mockData.actionType = \"initialize\";\n\n    runCode(mockData);\n\n    const personalizeSdkUrl = mockData.personalizeSdkUrl;\n\n    assertApi('injectScript').wasCalledWith(personalizeSdkUrl, success, failure, personalizeSdkUrl);\n\n    assertApi('gtmOnSuccess').wasCalled();\n    assertApi('gtmOnFailure').wasNotCalled();\n- name: calls init when sdk is loaded and initialize is selected\n  code: |\n    let success, failure;\n\n    mock('injectScript', function (url, onSuccess, onFailure){\n      success = onSuccess;\n      failure = onFailure;\n      onSuccess();\n    });\n\n    mockData.actionType = \"initialize\";\n\n    runCode(mockData);\n\n    assertApi('callInWindow').wasCalledWith('personalize.setEdgeApiUrl', mockData.edgeApiUrl);\n    assertApi('callInWindow').wasCalledWith('personalize.init', mockData.projectUid);\n- name: logs error and exits when sdk fails to load when initialize is selected\n  code: |-\n    let success, failure;\n\n    mock('injectScript', function (url, onSuccess, onFailure){\n      success = onSuccess;\n      failure = onFailure;\n      onFailure();\n    });\n\n    mockData.actionType = \"initialize\";\n\n    runCode(mockData);\n\n    const personalizeSdkUrl = mockData.personalizeSdkUrl;\n\n    assertApi('injectScript').wasCalledWith(personalizeSdkUrl, success, failure, personalizeSdkUrl);\n\n    assertApi('gtmOnFailure').wasCalled();\n    assertApi('logToConsole').wasCalledWith('Failed to load sdk');\n    assertApi('gtmOnSuccess').wasNotCalled();\n- name: checks if init was called before performing actions\n  code: |-\n    mock('callInWindow', function(method){\n      if(method === \"personalize.getInitializationStatus\"){\n        return \"initializing\";\n      }\n    });\n\n    const testExperiences = [{ shortUID: 'mockShortUID_one' }, { shortUID: 'mockShortUID_two' }];\n    mockData.experiences = testExperiences;\n\n    runCode(mockData);\n\n    assertApi('callInWindow').wasCalledWith('personalize.getInitializationStatus');\n- name: fails if initialize is not called before performing actions\n  code: |-\n    mock('callInWindow', function(method){\n      if(method === \"personalize.getInitializationStatus\"){\n        return undefined;\n      }\n    });\n\n    runCode(mockData);\n\n    assertApi('callInWindow').wasCalledWith('personalize.getInitializationStatus');\n    assertApi('logToConsole').wasCalledWith('Cannot perform actions before initialization');\n    assertApi('gtmOnFailure').wasCalled();\n- name: triggers impressions for a list of experiences when triggerImpressions is\n    selected\n  code: |\n    mockData.actionType = 'triggerImpressions';\n    const testExperiences = [{ shortUID: 'mockShortUID_one' }, { shortUID: 'mockShortUID_two' }];\n    mockData.experiences = testExperiences;\n\n    mock('callInWindow', function (method) {\n      if (method === 'personalize.getInitializationStatus') {\n        return 'initializing';\n      }\n    });\n\n    runCode(mockData);\n\n    assertApi('callInWindow').wasCalledWith('personalize.triggerImpression', testExperiences[0].shortUID);\n    assertApi('callInWindow').wasCalledWith('personalize.triggerImpression', testExperiences[1].shortUID);\n    assertApi('gtmOnSuccess').wasCalled();\n- name: fails if triggerImpressions is selected and did not input experienceShortUIDs\n  code: |\n    mockData.actionType = 'triggerImpressions';\n    mock('callInWindow', function (method) {\n      if (method === 'personalize.getInitializationStatus') {\n        return 'initialzing';\n      }\n    });\n\n    runCode(mockData);\n\n    assertApi('logToConsole').wasCalledWith('Experience ShortUIDs cannot be empty');\n    assertApi('gtmOnFailure').wasCalled();\n- name: triggers event with eventkey when triggerEvent is selected\n  code: |-\n    mockData.actionType = \"triggerEvent\";\n    mockData.eventKey = \"mock-event\";\n\n    mock('callInWindow', function (method) {\n      if(method === 'personalize.getInitializationStatus') {\n        return 'initializing';\n      }\n    });\n\n    runCode(mockData);\n\n    assertApi('callInWindow').wasCalledWith('personalize.triggerEvent', 'mock-event');\n    assertApi('gtmOnSuccess').wasCalled();\n- name: fails if triggerEvent is selected and did not input eventKey\n  code: |-\n    mockData.actionType = \"triggerEvent\";\n\n    mock('callInWindow', function (method) {\n      if(method === 'personalize.getInitializationStatus') {\n        return 'initializing';\n      }\n    });\n\n    runCode(mockData);\n\n    assertApi('logToConsole').wasCalledWith('Event Key cannot be empty');\n    assertApi('gtmOnFailure').wasCalled();\n- name: fails if the actionType is invalid\n  code: |-\n    mockData.actionType = undefined;\n\n    mock('callInWindow', function (method) {\n      if (method === 'personalize.getInitializationStatus') {\n        return 'initializing';\n      }\n    });\n\n    runCode(mockData);\n\n    assertApi('gtmOnFailure').wasCalled();\n    assertApi('logToConsole').wasCalledWith('Please select a valid actionType');\n- name: sets user attributes when action is selected as set attributes\n  code: |-\n    mockData.actionType = \"setAttributes\";\n    mockData.userAttributes = [{\"attributeKey\":\"mock-attribute\",\"attributeValue\":\"true\"}];\n\n    mock('callInWindow', function (method) {\n      if(method === 'personalize.getInitializationStatus') {\n        return 'initializing';\n      }\n    });\n\n    runCode(mockData);\n\n    assertApi('callInWindow').wasCalledWith('personalize.set', {\"mock-attribute\":true});\n    assertApi('gtmOnSuccess').wasCalled();\n- name: fails to set user attributes if undefined\n  code: |-\n    mockData.actionType = \"setAttributes\";\n\n    mock('callInWindow', function (method) {\n      if(method === 'personalize.getInitializationStatus') {\n        return 'initializing';\n      }\n    });\n\n    runCode(mockData);\n\n    assertApi('gtmOnFailure').wasCalled();\n- name: sets the user id when setUserId is selected and preserveUserAttributes is\n    true\n  code: |-\n    mockData.actionType = \"setUserId\";\n    mockData.preserveUserAttributes = true;\n\n    mock('callInWindow', function (method) {\n      if(method === 'personalize.getInitializationStatus') {\n        return 'initializing';\n      }\n    });\n\n    mock('copyFromDataLayer', function (object) {\n      return 'mock-email@gmail.com';\n    });\n    runCode(mockData);\n\n    const userId = 'mock-email@gmail.com';\n\n    assertApi('callInWindow').wasCalledWith('personalize.setUserId', userId, {preserveUserAttributes: true});\n    assertApi('gtmOnSuccess').wasCalled();\n- name: sets the user id when setUserId is selected and preserveUserAttributes is\n    false\n  code: |-\n    mockData.actionType = \"setUserId\";\n    mockData.preserveUserAttributes = false;\n\n    mock('callInWindow', function (method) {\n      if(method === 'personalize.getInitializationStatus') {\n        return 'initializing';\n      }\n    });\n\n    mock('copyFromDataLayer', function (object) {\n      return 'mock-email@gmail.com';\n    });\n\n    runCode(mockData);\n\n    const userId = 'mock-email@gmail.com';\n\n    assertApi('callInWindow').wasCalledWith('personalize.setUserId', userId);\n    assertApi('gtmOnSuccess').wasCalled();\n- name: resets the sdk when reset action is selected\n  code: |-\n    mockData.actionType = 'reset';\n\n    mock('callInWindow', function (method) {\n      if(method === 'personalize.getInitializationStatus') {\n        return 'initializing';\n      }\n    });\n\n    runCode(mockData);\n\n    assertApi('callInWindow').wasCalledWith('personalize.reset');\n    assertApi('gtmOnSuccess').wasCalled();\nsetup: |-\n  const log = require('logToConsole');\n\n  const mockData = {\n    personalizeSdkUrl: 'mockURL',\n    projectUid: 'mockProjectUID',\n    edgeApiUrl: 'mockEdgeApiUrl',\n  };\n\n\n___NOTES___\n\nCreated on 16/02/2024, 11:10:48\n\n\n",
+                "galleryReference": {
+                    "host": "github.com",
+                    "owner": "contentstack",
+                    "repository": "personalize-actions-gtm-template",
+                    "version": "60e5d5f23fc8ea2f849de35a54c02fce06b18f41",
+                    "signature": "b9cde944d078a4b59e164e8c1b6b0ddc7822e8dd5b1d580a856e49291548b4b3",
+                    "galleryTemplateId": "WKGBT"
+                }
+            }
+        ]
+    }
+}
