@@ -124,7 +124,7 @@
                     {
                         "type": "TEMPLATE",
                         "key": "projectUid",
-                        "value": "<use yor>"
+                        "value": "<use your personalize project uid>"
                     },
                     {
                         "type": "TEMPLATE",
