@@ -5,8 +5,8 @@ import {
 
 import Personalize from '@contentstack/personalize-edge-sdk';
 
-export default async function middleware(req: NextRequest) {
-   // use this middleware only when developing locally
+export default async function proxy(req: NextRequest) {
+   // use this proxy only when developing locally
    // skip it when deployed to launch
    // as we'll use the functions/[proxy].edge.js in launch
   if (process.env.NODE_ENV !== 'development') {
@@ -33,3 +33,9 @@ export default async function middleware(req: NextRequest) {
 
   return response;
 }
+
+export const config = {
+  // skip static assets, source maps, api routes and browser probes so we
+  // don't call the Personalize edge API (manifest) for them
+  matcher: ['/((?!api|_next|assets|\\.well-known|favicon\\.ico|.*\\.[^/]+$).*)'],
+};
