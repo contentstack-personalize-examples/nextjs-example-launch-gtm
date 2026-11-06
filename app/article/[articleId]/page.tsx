@@ -15,11 +15,12 @@ const ArticlePage = async ({
   params,
   searchParams,
 }: {
-  params: { articleId: string };
-  searchParams: Record<string, string>;
+  params: Promise<{ articleId: string }>;
+  searchParams: Promise<Record<string, string>>;
 }) => {
+  const [{ articleId }, query] = await Promise.all([params, searchParams]);
   let variantParam = decodeURIComponent(
-    searchParams[Personalize.VARIANT_QUERY_PARAM]
+    query[Personalize.VARIANT_QUERY_PARAM]
   );
   let [homepageEntry] = await getEntries(
     process.env.NEXT_PUBLIC_CONTENTSTACK_HOMEPAGE_CONTENTTYPE_UID as string,
@@ -28,7 +29,6 @@ const ArticlePage = async ({
   ) as any[];
   let navbarProps = extractNavbarProps(homepageEntry);
 
-  let articleId = params.articleId;
   let articleEntry: Article = (await getEntries(
     process.env.NEXT_PUBLIC_CONTENTSTACK_ARTICLE_CONTENTTYPE_UID as string,
     { articleid: articleId },

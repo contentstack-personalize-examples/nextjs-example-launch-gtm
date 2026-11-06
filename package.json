@@ -6,29 +6,32 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "eslint ."
   },
   "dependencies": {
-    "@contentstack/delivery-sdk": "^4.3.0",
-    "@contentstack/personalize-edge-sdk": "^1.0.15",
-    "@next/third-parties": "^15.3.3",
-    "clsx": "^2.0.0",
-    "next": "^15.3.3",
-    "next-auth": "^4.24.11",
-    "react": "^18",
-    "react-dom": "^18",
-    "react-icons": "^5.3.0",
-    "tailwind-merge": "^2.5.2"
+    "@contentstack/delivery-sdk": "^5.6.2",
+    "@contentstack/personalize-edge-sdk": "^1.0.28",
+    "@next/third-parties": "^16.4.5",
+    "clsx": "^2.1.1",
+    "next": "^16.4.5",
+    "next-auth": "^4.24.15",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "react-icons": "^5.7.0",
+    "tailwind-merge": "^2.6.1"
   },
   "devDependencies": {
-    "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
-    "autoprefixer": "^10.0.1",
-    "eslint": "^8",
-    "eslint-config-next": "14.0.3",
-    "postcss": "^8",
-    "tailwindcss": "^3.4.13",
-    "typescript": "^5"
+    "@types/node": "^22.20.5",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "autoprefixer": "^10.6.2",
+    "eslint": "^9.39.5",
+    "eslint-config-next": "^16.4.5",
+    "postcss": "^8.5.32",
+    "tailwindcss": "^3.4.19",
+    "typescript": "~5.9"
+  },
+  "engines": {
+    "node": ">=20.9.0"
   }
 }
